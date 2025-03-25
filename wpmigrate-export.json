@@ -1,0 +1,1 @@
+{"name":"dev ","domain":"https://bmoutsourcing.com","path":"/var/www/bmoutsourcing.com","wpVersion":"6.7.2","services":{"php":{"name":"php","version":"7.4.33"},"mariadb":{"name":"mariadb","version":"5.5.5-10.11.9-MariaDB-ubu2204"},"litespeed":{"name":"litespeed"}},"wpMigrate":{"version":"2.7.2"}}

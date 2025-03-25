@@ -1,0 +1,245 @@
+/* Main container styles */
+.aisg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .aisg-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Generator form styles */
+  .aisg-generator-form {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aisg-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .aisg-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .aisg-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+  }
+
+  textarea::placeholder {
+    color: #95958d; /* Set the placeholder text color */
+  }
+  
+  .aisg-submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #fa4e42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .aisg-submit-button:hover {
+    background-color: #fc958e;
+  }
+  
+  /* Loading spinner */
+.aisg-loading {
+  text-align: center;
+  margin: 20px 0;
+  display: none;
+}
+
+.aisg-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #fa4e42;
+  animation: spin 1s linear infinite;
+  position: relative;
+  margin: 0 auto;
+}
+
+.aisg-spinner-progress {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  color: #fa4e42;
+  animation: none !important;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#aisg-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+  
+  /* Results styles */
+  .aisg-results {
+    display: none;
+    margin-top: 30px;
+  }
+  
+  .aisg-results h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .aisg-images-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .aisg-image-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .aisg-image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .aisg-image-item.selected {
+    border: 3px solid #0073aa;
+  }
+  
+  .aisg-image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Modal styles */
+  .aisg-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .aisg-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .aisg-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .aisg-close:hover {
+    color: #333;
+  }
+  
+  .aisg-modal h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .aisg-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .aisg-selected-image-container {
+    text-align: center;
+  }
+  
+  .aisg-selected-image-container img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Success message */
+  .aisg-success-message {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .aisg-images-container {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  
+    .aisg-modal-content {
+      width: 95%;
+      margin: 10% auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .aisg-container {
+      padding: 10px;
+    }
+  
+    .aisg-generator-form {
+      padding: 15px;
+    }
+  
+    .aisg-images-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+  }
+  
+  
