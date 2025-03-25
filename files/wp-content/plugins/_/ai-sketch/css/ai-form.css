@@ -1,0 +1,60 @@
+#aisg-contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .aisg-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .aisg-form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .aisg-form-group input,
+  .aisg-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  textarea::placeholder {
+    color: #95958d; /* Set the placeholder text color */
+  }
+  
+  .aisg-submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fa4e42;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .aisg-submit-button:hover {
+    background-color: #fc958e;
+  }
+  
+  .aisg-success-message {
+    color: #5cb85c;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .aisg-additional-info {
+    margin-top:5rem;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 0.9em;
+    text-align: center;
+} 
